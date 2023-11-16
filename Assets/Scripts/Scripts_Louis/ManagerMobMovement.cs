@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,6 @@ public class ManagerMobMovement : MonoBehaviour
     [SerializeField] private MobFollowPlayer _followMovement;
     [SerializeField] private MobEscapeMovement _escapeMovement;
     [SerializeField] private bool _isEscapeMob; // Ce booléen temporaire sert juste à définir si notre mob va fuir le joueur ou non.
-
 
     private NavMeshAgent _agent;
 
@@ -66,5 +66,14 @@ public class ManagerMobMovement : MonoBehaviour
             _baseMovement.IsBaseState = true;
             _agent.speed = 1f;
         }
+    }
+
+    /// <summary>
+    /// Désactive le navmesh du mob. 
+    /// </summary>
+    public void DisableMovement()
+    {
+        _agent.isStopped = true;
+        _agent.enabled = false;
     }
 }

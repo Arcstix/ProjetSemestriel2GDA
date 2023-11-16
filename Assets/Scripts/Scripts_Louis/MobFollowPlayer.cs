@@ -15,6 +15,9 @@ public class MobFollowPlayer : MonoBehaviour
 
     public void FollowPlayer(Vector3 playerPosition)
     {
-        _agent.SetDestination(playerPosition);
+        if (_agent.enabled)
+        {
+            _agent.SetDestination(playerPosition);
+        }
     }
 }
