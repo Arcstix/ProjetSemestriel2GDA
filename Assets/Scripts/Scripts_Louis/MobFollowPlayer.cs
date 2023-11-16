@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// Ce script permet de suivre le Player quand il est proche.
 public class MobFollowPlayer : MonoBehaviour
 {
     private NavMeshAgent _agent;

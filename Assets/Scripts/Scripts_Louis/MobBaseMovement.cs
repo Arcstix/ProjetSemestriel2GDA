@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// Ce script est utilisé quand le mob est dans son état initial.
 public class MobBaseMovement : MonoBehaviour
 {
     [SerializeField] private float _radiusOfTheCircleForRandomDestination = 20f;
@@ -12,6 +13,7 @@ public class MobBaseMovement : MonoBehaviour
     private Vector3 _destination;
     private bool _isBaseState = true;
 
+    // Une encapsulation qui permet quand on a une référence du script d'accéder à la variable.
     public bool IsBaseState { get => _isBaseState; set => _isBaseState = value; }
 
     private void Awake()

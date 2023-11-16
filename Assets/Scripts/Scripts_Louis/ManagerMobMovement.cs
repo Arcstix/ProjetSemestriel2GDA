@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// Ce script va servir à gérer les états du Mob.
 public class ManagerMobMovement : MonoBehaviour
 {
+    // On référence chaque état du mob qui correspond à un script.
     [SerializeField] private MobBaseMovement _baseMovement;
     [SerializeField] private MobFollowPlayer _followMovement;
     [SerializeField] private MobEscapeMovement _escapeMovement;
-    [SerializeField] private bool _isEscapeMob;
+    [SerializeField] private bool _isEscapeMob; // Ce booléen temporaire sert juste à définir si notre mob va fuir le joueur ou non.
 
 
     private NavMeshAgent _agent;
@@ -18,13 +20,14 @@ public class ManagerMobMovement : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
     }
 
+    // Les changements d'état se font dans le cas ou le player est détecté par le mob.
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("personnage détecté");
+        // Important de savoir si c'est bien le Player que le mob détecte.
         if (other.CompareTag("Player"))
         {           
-            _baseMovement.IsBaseState = false;
-            _agent.speed = 5f;
+            _baseMovement.IsBaseState = false; // Le mob n'est plus dans son état de base.
+            _agent.speed = 5f; // On augmente ça vitesse pour marquer un changement de comportement.
 
             if (_isEscapeMob)
             {
@@ -39,7 +42,6 @@ public class ManagerMobMovement : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("personnage détecté");
         if (other.CompareTag("Player"))
         {
             _baseMovement.IsBaseState = false;
@@ -55,6 +57,7 @@ public class ManagerMobMovement : MonoBehaviour
         }
     }
 
+    // Dans le cas où le player n'est plus détecté le mob reprend son état initial.
     private void OnTriggerExit(Collider other)
     {
         Debug.Log("personnage détecté");
