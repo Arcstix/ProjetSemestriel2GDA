@@ -235,7 +235,7 @@ MonoBehaviour:
   - {fileID: 5793458418694525514}
   - {fileID: 9025127869568856885}
   - {fileID: 1214418093428388557}
-  _childEntity: {fileID: 2772127842345743800, guid: fcd37ceb486377849934bc3c8fb83650, type: 3}
+  _childPrefab: {fileID: 5742549197094086233, guid: fcd37ceb486377849934bc3c8fb83650, type: 3}
 --- !u!114 &1680879674801460987
 MonoBehaviour:
   m_ObjectHideFlags: 0
