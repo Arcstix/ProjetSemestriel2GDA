@@ -19,7 +19,7 @@ public class PlayerManager : MonoBehaviour
         {
             ManagerMobMovement mob = other.GetComponentInParent<ManagerMobMovement>();
             mob.DisableMovement();
-            _spawner.SpawnEntity();
+            _spawner.SpawnChildEntity();
             Destroy(mob.gameObject);
         }
     }
