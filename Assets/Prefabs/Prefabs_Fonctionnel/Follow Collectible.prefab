@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6334319562184951826}
   - component: {fileID: 2351274633209751588}
   m_Layer: 0
-  m_Name: Mob Graphic
+  m_Name: Collectible Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4829502161185138732}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4357430531058932975}
   - component: {fileID: 3366345401678323602}
   m_Layer: 0
-  m_Name: Mob Physic
+  m_Name: Collectible Physic
   m_TagString: Mob
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,7 +162,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8058959501237011621
 GameObject:
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 1173394692395599377}
   - component: {fileID: 3390305811275993966}
   m_Layer: 0
-  m_Name: Follow Mob
+  m_Name: Follow Collectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0.25
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &6418807492575372501

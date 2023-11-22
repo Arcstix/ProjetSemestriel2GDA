@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7417406116611750116}
   - component: {fileID: 3395780577997940475}
   m_Layer: 0
-  m_Name: Follow Mob
+  m_Name: Follow Collectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
