@@ -42,5 +42,8 @@ public class SpawnChild : MonoBehaviour
     {
         _spawnUsed.Remove(_refLocation);
     }
-
+    void Fusion()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/Fusion", transform.position);
+    }
 }
