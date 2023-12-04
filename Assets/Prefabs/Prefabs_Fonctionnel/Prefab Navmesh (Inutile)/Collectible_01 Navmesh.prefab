@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 1173394692395599377}
   - component: {fileID: 3390305811275993966}
   m_Layer: 0
-  m_Name: Collectible_01
+  m_Name: Collectible_01 Navmesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
