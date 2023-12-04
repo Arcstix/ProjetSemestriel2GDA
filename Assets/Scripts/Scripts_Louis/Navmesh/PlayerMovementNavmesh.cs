@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // Ce script permet de bouger le Player grâce au NavMesh.
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementNavmesh : MonoBehaviour
 {
     [SerializeField] private Camera _camera;
     [SerializeField] private LayerMask _groundLayer;

@@ -5,12 +5,12 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // Ce script va servir à gérer les états du Mob.
-public class ManagerMobMovement : MonoBehaviour
+public class ManagerMobMovementNavmesh : MonoBehaviour
 {
     // On référence chaque état du mob qui correspond à un script.
-    [SerializeField] private MobBaseMovement _baseMovement;
-    [SerializeField] private MobFollowPlayer _followMovement;
-    [SerializeField] private MobEscapeMovement _escapeMovement;
+    [SerializeField] private MobBaseMovementNavmesh _baseMovement;
+    [SerializeField] private MobFollowPlayerNavmesh _followMovement;
+    [SerializeField] private MobEscapeMovementNavmesh _escapeMovement;
     [SerializeField] private bool _isEscapeMob; // Ce booléen temporaire sert juste à définir si notre mob va fuir le joueur ou non.
 
     private NavMeshAgent _agent;

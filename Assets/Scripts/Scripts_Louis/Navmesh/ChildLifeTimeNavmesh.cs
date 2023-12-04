@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChildLifeTime : MonoBehaviour
+public class ChildLifeTimeNavmesh : MonoBehaviour
 {
     [SerializeField] private float _lifeTime = 10f;
 
-    private SpawnChild _refSpawner; // Va permettre de prévenir le spawner quand la durée de vie prend fin.
+    private SpawnChildNavmesh _refSpawner; // Va permettre de prévenir le spawner quand la durée de vie prend fin.
     private Transform _refLocation; // Va permettre d'avoir une ref par rapport à l'emplacement utilisé.
 
     /// <summary>
@@ -14,7 +14,7 @@ public class ChildLifeTime : MonoBehaviour
     /// </summary>
     /// <param name="spawner"></param>
     /// <param name="refLocation"></param>
-    public void BeginLifeTime(SpawnChild spawner, Transform refLocation)
+    public void BeginLifeTime(SpawnChildNavmesh spawner, Transform refLocation)
     {
         _refSpawner = spawner;
         _refLocation = refLocation;

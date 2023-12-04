@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // Ce script permet au Mob de fuir le Player si il s'approche de lui.
-public class MobEscapeMovement : MonoBehaviour
+public class MobEscapeMovementNavmesh : MonoBehaviour
 {
     private NavMeshAgent _agent;
 

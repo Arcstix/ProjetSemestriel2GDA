@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 // Ce script est utilisé quand le mob est dans son état initial.
-public class MobBaseMovement : MonoBehaviour
+public class MobBaseMovementNavmesh : MonoBehaviour
 {
     [SerializeField] private float _radiusOfTheCircleForRandomDestination = 20f;
 
