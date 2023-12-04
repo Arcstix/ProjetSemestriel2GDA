@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: af0642cb8d553c140b564eee9fb5ea2c, type: 2}
+  - {fileID: 2100000, guid: 95350ef7e41104549b1d35ec62f00d0a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -180,7 +180,7 @@ GameObject:
   - component: {fileID: 1173394692395599377}
   - component: {fileID: 3390305811275993966}
   m_Layer: 0
-  m_Name: Follow Collectible
+  m_Name: Collectible_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

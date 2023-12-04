@@ -30,6 +30,8 @@ public class SpawnChild : MonoBehaviour
                 return; // On quitte la méthode plus tôt car la méthode a réalisé ce qu'on veut.
             }
         }
+
+        // Spawn un nouveau Spawner ici. Dans un emplacement définit dans une variable Transform.
     }
 
     /// <summary>
