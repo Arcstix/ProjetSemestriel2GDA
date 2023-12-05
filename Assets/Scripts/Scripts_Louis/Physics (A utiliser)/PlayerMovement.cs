@@ -48,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        // Direction du mouvement
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, _directionVector * 3);
     }
