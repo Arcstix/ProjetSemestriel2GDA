@@ -7,10 +7,11 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(BoxCollider))]
 public class SpawnerEntity : MonoBehaviour
 {
+    [SerializeField] private bool _isSpawnJustAtStart = false;
     [SerializeField] private GameObject[] _prefabToInstantiate;
     [SerializeField] private float _minTime = 20f;
     [SerializeField] private float _maxTime = 40f;
-    [SerializeField] private int _numberOfCollectibleAtStart = 10;
+    [SerializeField] private int _numberOfInstantiationAtStart = 10;
     [SerializeField] private LayerMask _groundLayer;
 
     private BoxCollider _collider;
@@ -27,11 +28,15 @@ public class SpawnerEntity : MonoBehaviour
         _minBound = _collider.bounds.min;
         _maxBound = _collider.bounds.max;
 
-        for (int i = 0; i < _numberOfCollectibleAtStart; i++)
+        for (int i = 0; i < _numberOfInstantiationAtStart; i++)
         {
             InstantiateEntity();
         }
-        InvokeRepeating("InstantiateEntity", 0, RandomTime());
+
+        if (!_isSpawnJustAtStart)
+        {
+            InvokeRepeating("InstantiateEntity", 0, RandomTime());
+        }        
     }
 
     private float RandomTime()

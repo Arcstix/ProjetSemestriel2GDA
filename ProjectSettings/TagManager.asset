@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Mob
   - Entity
+  - Blue
+  - Red
   layers:
   - Default
   - TransparentFX

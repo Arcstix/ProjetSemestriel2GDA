@@ -20,7 +20,7 @@ public class InputReader : MonoBehaviour
         // Si le joueur appuie sur la touche gauche de sa souris alors on passe en "Mode clique"
         if (Input.GetMouseButton(0))
         {
-            _playerMovement.OnClick = true;           
+            _playerMovement.OnClick = true;
         }
         else
         {
