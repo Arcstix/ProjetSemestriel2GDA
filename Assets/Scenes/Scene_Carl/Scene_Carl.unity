@@ -135,6 +135,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Core Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5490364960584731072, guid: edfc22037bec623448a098aa3b59e69c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 5693227410076781512, guid: edfc22037bec623448a098aa3b59e69c, type: 3}
+      propertyPath: _speed
+      value: 40
+      objectReference: {fileID: 0}
     - target: {fileID: 7763664027133842729, guid: edfc22037bec623448a098aa3b59e69c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
