@@ -8,6 +8,7 @@ TagManager:
   - Entity
   - Blue
   - Red
+  - Collectible
   layers:
   - Default
   - TransparentFX
