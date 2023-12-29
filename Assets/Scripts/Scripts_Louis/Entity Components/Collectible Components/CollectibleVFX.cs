@@ -8,6 +8,6 @@ public class CollectibleVFX : MonoBehaviour
 
     private void OnDestroy()
     {
-        Instantiate(_destroyParticle, transform.position, Quaternion.identity);
+        Instantiate(_destroyParticle, transform.position, Quaternion.identity);     
     }
 }
