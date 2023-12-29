@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
@@ -64,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log("Direction du déplacement : " + _directionVector);
     }
 
-    private void OnMove(InputValue value)
+    private void OnMove(Vector2 value)
     {
         Vector2 Input = _moveInputValue;
         distance = 1;
