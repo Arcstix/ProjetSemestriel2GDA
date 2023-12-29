@@ -148,7 +148,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_LocalScale: {x: 50, y: 1, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9201380892960927164}
@@ -298,8 +298,8 @@ MonoBehaviour:
   _prefabToInstantiate:
   - {fileID: 5738159663817548254, guid: d51867bcad1c7984c8b5fd554dc3e078, type: 3}
   - {fileID: 8516858375545145188, guid: 6a843e2421d5ae9498d3257f9d87adf1, type: 3}
-  _minTime: 1
-  _maxTime: 2
+  _minTime: 0.2
+  _maxTime: 0.4
   _numberOfInstantiationAtStart: 30
   _groundLayer:
     serializedVersion: 2
@@ -321,7 +321,7 @@ MonoBehaviour:
   - {fileID: 2214224241857002910, guid: 2ad89ad398003fe4d9b514289df4bd8d, type: 3}
   _minTime: 20
   _maxTime: 40
-  _numberOfInstantiationAtStart: 2
+  _numberOfInstantiationAtStart: 10
   _groundLayer:
     serializedVersion: 2
     m_Bits: 64
