@@ -1,0 +1,34 @@
+{
+    "name": "Controller_XBOX",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "06787236-660f-4cd0-81bf-ff5eb0336709",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "e78aca62-0815-4fa2-bfa6-486e8bed4d8c",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "05abcd53-9837-4a72-9102-041ad8d15e3a",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

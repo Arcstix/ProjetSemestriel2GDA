@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
@@ -12,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 _targetPosition;
     private Vector3 _directionVector;
     private bool _onClick = false;
+
+    private Vector2 _moveInputValue;
+    public float distance;
 
     public bool OnClick { get => _onClick; set => _onClick = value; } // On applique une force au player seulement pendant un clique.
 
@@ -28,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         CalculateDirection();
-        float distance = CalculateDistanceToTarget();
+        distance = CalculateDistanceToTarget();
         ApplyVelocity(distance);
     }
 
@@ -58,6 +62,14 @@ public class PlayerMovement : MonoBehaviour
     {       
         _directionVector = (_targetPosition - transform.position).normalized;
         //Debug.Log("Direction du déplacement : " + _directionVector);
+    }
+
+    private void OnMove(InputValue value)
+    {
+        Vector2 Input = _moveInputValue;
+        distance = 1;
+        _directionVector = new Vector3(Input.x, 0, Input.y);
+        Debug.Log("XBOX");
     }
 
     private void OnDrawGizmos()
