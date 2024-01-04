@@ -68,7 +68,7 @@ GameObject:
   - component: {fileID: 42735609720037463}
   - component: {fileID: 5891412515783615720}
   m_Layer: 0
-  m_Name: Collectible_02
+  m_Name: Collectible_Red
   m_TagString: Red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &8784278134249854901
 Rigidbody:
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b72ffbd37c9d904c9a6c8617652eeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 60
+  _speed: 100
   _minDistanceToApplyForce: 0.1
 --- !u!114 &42735609720037463
 MonoBehaviour:
@@ -177,7 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7898513ad1105e84e8dfa5d559093a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destroyParticle: {fileID: 322551793389270093, guid: eb8d986a0e9e2e84dbd9b5d35d07b131, type: 3}
+  _destroyCollectible: {fileID: 7420343880291961839, guid: 8fcef79c5a9b6be46ba86a9cdc3d4ad6, type: 3}
+  _visualEffect: {fileID: 8729680268444450137}
 --- !u!1001 &4047685147271590551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -254,5 +255,10 @@ PrefabInstance:
 --- !u!4 &8040252411367068521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6321069027246236158, guid: ef934661a5dd7a04fa25326da9160fd0, type: 3}
+  m_PrefabInstance: {fileID: 4047685147271590551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!2083052967 &8729680268444450137 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 4686639459517681614, guid: ef934661a5dd7a04fa25326da9160fd0, type: 3}
   m_PrefabInstance: {fileID: 4047685147271590551}
   m_PrefabAsset: {fileID: 0}

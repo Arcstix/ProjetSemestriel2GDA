@@ -2,13 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.VFX;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(BoxCollider))]
 public class SpawnerEntity : MonoBehaviour
 {
     [SerializeField] private bool _isSpawnJustAtStart = false;
+
     [SerializeField] private GameObject[] _prefabToInstantiate;
+
     [SerializeField] private float _minTime = 20f;
     [SerializeField] private float _maxTime = 40f;
     [SerializeField] private int _numberOfInstantiationAtStart = 10;
@@ -59,8 +62,12 @@ public class SpawnerEntity : MonoBehaviour
             {
                 int randomIndex = (int)Mathf.Round(Random.Range(0, _prefabToInstantiate.Length));
                 GameObject newInstance = Instantiate(_prefabToInstantiate[randomIndex], hitInfo.point, Quaternion.identity);
-                
+
+                if(newInstance.TryGetComponent<SummonCollectible>(out SummonCollectible summonCollectible))
+                {
+                    summonCollectible.SetSpawnerRef(this);
+                }
             }
-        }       
+        }
     }
 }

@@ -6,6 +6,7 @@ public class Detection : MonoBehaviour
 {
     private CollectibleManager _collectibleManager;
     private CollectibleMovement _collectibleMovement;
+    private CollectibleVFX _collectibleVFX;
     private List<Transform> _targetList = new List<Transform>();
 
     private Transform _closestTarget;
@@ -15,6 +16,7 @@ public class Detection : MonoBehaviour
     private void Awake()
     {
         _collectibleMovement = GetComponent<CollectibleMovement>();
+        _collectibleVFX = GetComponent<CollectibleVFX>();
     }
 
     private void Update()
@@ -32,6 +34,7 @@ public class Detection : MonoBehaviour
         {
             // La target la plus proche a changé alors on l'informe au Manager et on change la variable qui correspond à la target la plus proche.
             _closestTarget = CalculateClosestTarget();
+            _collectibleVFX.PlayVFXDetection();
             SendTarget();
         }
     }
@@ -60,6 +63,7 @@ public class Detection : MonoBehaviour
             if(_closestTarget == null)
             {
                 _closestTarget = newTarget;
+                _collectibleVFX.PlayVFXDetection();
                 SendTarget();
             }
 
@@ -70,6 +74,7 @@ public class Detection : MonoBehaviour
         }
     }
 
+    // Le collectible s'arrête s'il ne détecte plus personne
     //private void OnTriggerExit(Collider other)
     //{
     //    if (other.CompareTag("Entity"))

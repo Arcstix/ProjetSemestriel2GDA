@@ -37,6 +37,7 @@ public class CollectibleMovement : MonoBehaviour
             //On calcule la distance entre la position du collectible et de la target pour la vitesse.
             float distance = (_currentTarget.position - transform.position).magnitude;
 
+
             //On applique la force au Collectible.
             if (_collectibleRb.velocity.magnitude < _speed && distance > _minDistanceToApplyForce)
             {

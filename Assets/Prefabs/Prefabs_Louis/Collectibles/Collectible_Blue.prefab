@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8241936593283828833}
   - component: {fileID: 8853521060229575183}
   m_Layer: 0
-  m_Name: Collectible_01
+  m_Name: Collectible_Blue
   m_TagString: Blue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,7 +57,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1
+  m_Radius: 0.8
   m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!54 &6978273577484274150
 Rigidbody:
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b72ffbd37c9d904c9a6c8617652eeab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 60
+  _speed: 100
   _minDistanceToApplyForce: 0.1
 --- !u!114 &8241936593283828833
 MonoBehaviour:
@@ -124,7 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7898513ad1105e84e8dfa5d559093a6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destroyParticle: {fileID: 262170249607795965, guid: f00bd08c04898e347b40a5dab9b29c27, type: 3}
+  _destroyCollectible: {fileID: 6684096481461113730, guid: 84320c5065d306241b5b02ecc2fafed1, type: 3}
+  _visualEffect: {fileID: 736209673595594536}
 --- !u!1 &8533271884274251547
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,11 +243,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Collectible V3
       objectReference: {fileID: 0}
+    - target: {fileID: 8099310257148258309, guid: 59184216fbc49f749a87d06ba7feebc1, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099310257148258309, guid: 59184216fbc49f749a87d06ba7feebc1, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[2].m_Name
+      value: Circle Color
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099310257148258309, guid: 59184216fbc49f749a87d06ba7feebc1, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[2].m_Value.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099310257148258309, guid: 59184216fbc49f749a87d06ba7feebc1, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[2].m_Value.y
+      value: 0.8023506
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099310257148258309, guid: 59184216fbc49f749a87d06ba7feebc1, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[2].m_Value.z
+      value: 1.0039217
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099310257148258309, guid: 59184216fbc49f749a87d06ba7feebc1, type: 3}
+      propertyPath: m_PropertySheet.m_Vector4f.m_Array.Array.data[2].m_Overridden
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59184216fbc49f749a87d06ba7feebc1, type: 3}
+--- !u!2083052967 &736209673595594536 stripped
+VisualEffect:
+  m_CorrespondingSourceObject: {fileID: 8099310257148258309, guid: 59184216fbc49f749a87d06ba7feebc1, type: 3}
+  m_PrefabInstance: {fileID: 8813840275767086893}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5718436295915389905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3822142708694912252, guid: 59184216fbc49f749a87d06ba7feebc1, type: 3}
