@@ -12,11 +12,15 @@ public class SpawnerEntity : MonoBehaviour
     [SerializeField] private float _minTime = 20f;
     [SerializeField] private float _maxTime = 40f;
     [SerializeField] private int _numberOfInstantiationAtStart = 10;
+    [SerializeField] private int _maxNumberOfInstantiation = 50;
     [SerializeField] private LayerMask _groundLayer;
 
     private BoxCollider _collider;
     private Vector3 _minBound;
     private Vector3 _maxBound;
+    private int _currentNumberOfInstantiation;
+
+    public int CurrentNumberOfInstantiation { get => _currentNumberOfInstantiation; set => _currentNumberOfInstantiation = value; }
 
     private void Awake()
     {
@@ -46,11 +50,17 @@ public class SpawnerEntity : MonoBehaviour
 
     private void InstantiateEntity()
     {
-        Vector3 randomPos = new Vector3(Random.Range(_minBound.x, _maxBound.x), _maxBound.y, Random.Range(_minBound.z, _maxBound.z));
-        if (Physics.Raycast(randomPos, Vector3.down, out RaycastHit hitInfo, Mathf.Infinity, _groundLayer))
+        // On vérifie avant d'instantier une entité que l'on n'a pas atteint la valeur max autorisé dans la scène.
+        if(_currentNumberOfInstantiation < _maxNumberOfInstantiation)
         {
-            int randomIndex = (int)Mathf.Round(Random.Range(0, _prefabToInstantiate.Length));
-            Instantiate(_prefabToInstantiate[randomIndex], hitInfo.point, Quaternion.identity);
-        }
+            _currentNumberOfInstantiation++;
+            Vector3 randomPos = new Vector3(Random.Range(_minBound.x, _maxBound.x), _maxBound.y, Random.Range(_minBound.z, _maxBound.z));
+            if (Physics.Raycast(randomPos, Vector3.down, out RaycastHit hitInfo, Mathf.Infinity, _groundLayer))
+            {
+                int randomIndex = (int)Mathf.Round(Random.Range(0, _prefabToInstantiate.Length));
+                GameObject newInstance = Instantiate(_prefabToInstantiate[randomIndex], hitInfo.point, Quaternion.identity);
+                
+            }
+        }       
     }
 }

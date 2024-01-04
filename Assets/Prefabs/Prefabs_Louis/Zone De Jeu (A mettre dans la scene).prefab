@@ -128,9 +128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5473856293102322891}
-  - component: {fileID: 1474608422948470818}
   - component: {fileID: 3745435982115339334}
-  - component: {fileID: 6360029526172525458}
   m_Layer: 6
   m_Name: Zone De Jeu (A mettre dans la scene)
   m_TagString: Untagged
@@ -155,14 +153,6 @@ Transform:
   - {fileID: 383332734950707843}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1474608422948470818
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3840328334592772200}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &3745435982115339334
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -205,28 +195,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6360029526172525458
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3840328334592772200}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &6676913186095595445
 GameObject:
   m_ObjectHideFlags: 0

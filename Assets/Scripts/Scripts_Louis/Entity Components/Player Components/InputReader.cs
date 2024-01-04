@@ -9,6 +9,9 @@ public class InputReader : MonoBehaviour
     [SerializeField] private LayerMask _layerGround;
 
     private PlayerMovement _playerMovement;
+    private Vector3 _joystickDirection;
+
+    public Vector3 JoystickDirection { get => _joystickDirection; set => _joystickDirection = value; }
 
     private void Awake()
     {
@@ -26,6 +29,12 @@ public class InputReader : MonoBehaviour
         {
             _playerMovement.OnClick = false;
         }
+
+        // On récupère les valeurs du joystick et on en fait un Vecteur direction qu'on envoie au PlayerMovement.
+        float _horizontal = Input.GetAxis("Horizontal");
+        float _vertical = Input.GetAxis("Vertical");
+        _joystickDirection = new Vector3(_horizontal, 0, _vertical).normalized;
+        _playerMovement.SetJoystickDirection(_joystickDirection);
     }
 
     private void FixedUpdate()
