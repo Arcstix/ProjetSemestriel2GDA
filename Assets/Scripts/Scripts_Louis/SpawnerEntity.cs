@@ -17,6 +17,7 @@ public class SpawnerEntity : MonoBehaviour
     [SerializeField] private int _numberOfInstantiationAtStart = 10;
     [SerializeField] private int _maxNumberOfInstantiation = 50;
     [SerializeField] private LayerMask _groundLayer;
+    [SerializeField] private Vector3 _spawnOffset = new Vector3(0, 0, 0);
 
     private BoxCollider _collider;
     private Vector3 _minBound;
@@ -61,7 +62,7 @@ public class SpawnerEntity : MonoBehaviour
             if (Physics.Raycast(randomPos, Vector3.down, out RaycastHit hitInfo, Mathf.Infinity, _groundLayer))
             {
                 int randomIndex = (int)Mathf.Round(Random.Range(0, _prefabToInstantiate.Length));
-                GameObject newInstance = Instantiate(_prefabToInstantiate[randomIndex], hitInfo.point, Quaternion.identity);
+                GameObject newInstance = Instantiate(_prefabToInstantiate[randomIndex], hitInfo.point + _spawnOffset, Quaternion.identity);
 
                 if(newInstance.TryGetComponent<SummonCollectible>(out SummonCollectible summonCollectible))
                 {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine;
 // Ce script doit être attaché à un objet qui possède un collider trigger et va détruire les collectibles.
 public class DestroyCollectibles : MonoBehaviour
 {
+    public event Action CollectibleDestroy;
+
     private void OnTriggerEnter(Collider other)
     {
         // On ne veut pas détecter la zone de détection des particules.
@@ -19,6 +22,7 @@ public class DestroyCollectibles : MonoBehaviour
             if(other.TryGetComponent<CollectibleVFX>(out CollectibleVFX collectibleVFX))
             {
                 collectibleVFX.PlayVFXDestroy();
+                CollectibleDestroy?.Invoke();
             }
         }
     }
