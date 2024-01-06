@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 3432352054027211500}
   - component: {fileID: 2499182596479563758}
   - component: {fileID: 378688387032428435}
+  - component: {fileID: 6976059652221134372}
   m_Layer: 0
-  m_Name: Explosion V2
+  m_Name: Explosion Purple
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -184,6 +185,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visualEffect: {fileID: 7786526161354511223}
+--- !u!114 &6976059652221134372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622948204858794613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b6b88d425f7234aae309cb9a973743, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maximumStress: 0.6
+  _range: 90
 --- !u!1 &6244456108302299587
 GameObject:
   m_ObjectHideFlags: 0

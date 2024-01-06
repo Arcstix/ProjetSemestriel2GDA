@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hasRandomSpeedMovement: 0
-  _speed: 100
+  _speed: 500
   _minSpeed: 5
   _maxSpeed: 50
   _minTime: 3
@@ -169,7 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _vortexVisual: {fileID: 843464339653075444}
   _destroyCollectibles: {fileID: 5384284901958145378}
-  _explosionPrefab: {fileID: 2622948204858794613, guid: 68c5b27904c02d24e975c95b262c5f05, type: 3}
+  _purpleExplosionPrefab: {fileID: 2622948204858794613, guid: 68c5b27904c02d24e975c95b262c5f05, type: 3}
+  _redExplosionPrefab: {fileID: 5474844562647147349, guid: 5c3d5c76634ca67419c43538906adc16, type: 3}
+  _blueExplosionPrefab: {fileID: 6680781297110223181, guid: db6847e860a89a24db82bff7e9d48b7e, type: 3}
   _numberForSurcharge: 20
   _gainParticleEachCharge: 20
   _gainSizeEachCharge: {x: 0.02, y: 0.02, z: 0.02}

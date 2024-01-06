@@ -8,7 +8,9 @@ public class VortexCharge : MonoBehaviour
 {
     [SerializeField] private VisualEffect _vortexVisual;
     [SerializeField] private DestroyCollectibles _destroyCollectibles;
-    [SerializeField] private GameObject _explosionPrefab;
+    [SerializeField] private GameObject _purpleExplosionPrefab;
+    [SerializeField] private GameObject _redExplosionPrefab;
+    [SerializeField] private GameObject _blueExplosionPrefab;
 
     [SerializeField] private int _numberForSurcharge = 20;
     [SerializeField] private int _gainParticleEachCharge = 20;
@@ -32,21 +34,58 @@ public class VortexCharge : MonoBehaviour
 
     private void HandleCharge()
     {
+        // Partie chargement.
         if(_currentCharge < _numberForSurcharge)
         {
-            _currentCharge++;
-            _currentChargeParticle += _gainParticleEachCharge;
-            _vortexVisual.SetInt("SpawnRate", _currentChargeParticle);
-            transform.localScale += _gainSizeEachCharge;
+            IncreaseCharge();
         }
 
-        if(_currentCharge >= _numberForSurcharge)
+        // Partie chargement complétée ou surcharge
+        if (_currentCharge >= _numberForSurcharge)
         {
-            _currentCharge = 0;
-            _currentChargeParticle = 0;
-            _vortexVisual.SetInt("SpawnRate", _currentChargeParticle);
-            transform.localScale = _defaultScale;
-            GameObject newInstance = Instantiate(_explosionPrefab, transform.position, Quaternion.identity);
+            InstantiateExplosion();
+            ResetVortexCharge();
         }
+    }
+
+    /// <summary>
+    /// Méthode appelé lorsque la charge est complète.
+    /// </summary>
+    private void InstantiateExplosion()
+    {
+        if(_destroyCollectibles.BlueAmount > _destroyCollectibles.RedAmount)
+        {
+            Instantiate(_blueExplosionPrefab, transform);
+        }
+        else if(_destroyCollectibles.BlueAmount < _destroyCollectibles.RedAmount)
+        {
+            Instantiate(_redExplosionPrefab, transform);
+        }
+        else
+        {
+            Instantiate(_purpleExplosionPrefab, transform);
+        }
+    }
+
+    /// <summary>
+    /// Méthode appelé quand on veut charger le vortex
+    /// </summary>
+    private void IncreaseCharge()
+    {
+        _currentCharge++;
+        _currentChargeParticle += _gainParticleEachCharge;
+        _vortexVisual.SetInt("SpawnRate", _currentChargeParticle);
+        transform.localScale += _gainSizeEachCharge;
+    }
+
+    // La charge est complète donc on réinitialise les paramètres.
+    private void ResetVortexCharge()
+    {
+        _currentCharge = 0;
+        _currentChargeParticle = 0;
+        _vortexVisual.SetInt("SpawnRate", _currentChargeParticle);
+        transform.localScale = _defaultScale;
+        _destroyCollectibles.BlueAmount = 0;
+        _destroyCollectibles.RedAmount = 0;
     }
 }
