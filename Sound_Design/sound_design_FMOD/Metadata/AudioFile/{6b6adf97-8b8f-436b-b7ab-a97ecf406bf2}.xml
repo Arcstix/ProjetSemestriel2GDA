@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6b6adf97-8b8f-436b-b7ab-a97ecf406bf2}">
+		<property name="assetPath">
+			<value>BoutonStart.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.5944217687074831</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ac979332-6cf5-4d0f-b094-b6f8ca2cbe0f}</destination>
+		</relationship>
+	</object>
+</objects>

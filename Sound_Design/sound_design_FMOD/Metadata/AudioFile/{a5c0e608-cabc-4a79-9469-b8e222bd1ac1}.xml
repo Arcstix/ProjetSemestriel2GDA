@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a5c0e608-cabc-4a79-9469-b8e222bd1ac1}">
+		<property name="assetPath">
+			<value>blackHoleExplosionPurple.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.8393650793650798</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ac979332-6cf5-4d0f-b094-b6f8ca2cbe0f}</destination>
+		</relationship>
+	</object>
+</objects>

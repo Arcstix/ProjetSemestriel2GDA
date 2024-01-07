@@ -98,6 +98,9 @@
 		<property name="length">
 			<value>0.78000000000000003</value>
 		</property>
+		<property name="playlistMode">
+			<value>1</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{598daeea-3c9a-49bf-8421-9957618b99ca}</destination>
 			<destination>{bce04a47-1361-4386-81fb-812ac213d64e}</destination>
@@ -126,7 +129,11 @@
 			<destination>{1327aabf-aab5-41ef-901e-c6dc6c8db53b}</destination>
 		</relationship>
 	</object>
-	<object class="MixerBusPanner" id="{12224596-6a80-4095-a477-c41d5853bc75}" />
+	<object class="MixerBusPanner" id="{12224596-6a80-4095-a477-c41d5853bc75}">
+		<property name="surroundLFELevel">
+			<value>-3.5</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{f1a485d7-22e2-4129-9c7d-4ab3e247541b}" />
 	<object class="SingleSound" id="{598daeea-3c9a-49bf-8421-9957618b99ca}">
 		<relationship name="audioFile">
