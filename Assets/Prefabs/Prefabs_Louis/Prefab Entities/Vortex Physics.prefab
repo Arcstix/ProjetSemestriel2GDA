@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 4747721729410806064}
   - component: {fileID: 2057660194505508807}
   m_Layer: 0
-  m_Name: Vortex Core
+  m_Name: Vortex Physics
   m_TagString: Entity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

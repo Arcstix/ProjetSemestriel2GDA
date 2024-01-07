@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StressReceiver : MonoBehaviour 
+public class ShakeReceiver : MonoBehaviour 
 {
     [SerializeField] private Camera _camera;
     [Tooltip("Exponent for calculating the shake factor. Useful for creating different effect fade outs")]
