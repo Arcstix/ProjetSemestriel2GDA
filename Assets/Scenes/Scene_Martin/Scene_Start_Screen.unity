@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &3178917207869884054
+--- !u!1001 &469928819
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -171,6 +171,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3591939109344374516, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2.5000153
+      objectReference: {fileID: 0}
     - target: {fileID: 7419502668088305519, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
       propertyPath: m_Name
       value: Scene Start
@@ -184,4 +188,4 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 3178917207869884054}
+  - {fileID: 469928819}
