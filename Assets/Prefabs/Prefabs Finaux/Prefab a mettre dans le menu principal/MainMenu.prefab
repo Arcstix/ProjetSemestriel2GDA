@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 5616749478804912579}
   - component: {fileID: 5433425420469615445}
   - component: {fileID: 4368168072616699654}
+  - component: {fileID: 3637642128977649441}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -279,3 +280,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3637642128977649441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296590414779069975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1477291380
+      Data2: 1098684607
+      Data3: 401765044
+      Data4: 891606507
+    Path: event:/UI/Bouton
+  Event: 
+  PlayEvent: 19
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

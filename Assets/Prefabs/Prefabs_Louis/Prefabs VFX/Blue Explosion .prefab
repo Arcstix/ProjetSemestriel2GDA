@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6684096481461113730}
   - component: {fileID: 5385131542079373950}
   - component: {fileID: 4280807872830150027}
+  - component: {fileID: 3853976973762618259}
   m_Layer: 0
   m_Name: 'Blue Explosion '
   m_TagString: Untagged
@@ -166,3 +167,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visualEffect: {fileID: 6684096481461113730}
+--- !u!114 &3853976973762618259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081613067401441436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -249476384
+      Data2: 1302381106
+      Data3: -1855617660
+      Data4: 1316598720
+    Path: event:/Action/colectExplosionBlue
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 60

@@ -179,7 +179,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scene Start
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6990310216662861119, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
+    - {fileID: 0}
+    - {fileID: 6295614097373696415, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
+    - {fileID: 303443113556074282, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
+    - {fileID: 7828708571427611873, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
+    - {fileID: 3937051806253301693, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
+    - {fileID: 5198369361131217143, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
+    - {fileID: 2676614949565191189, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
+    - {fileID: 7145791679150043869, guid: 99ece5f781c9b884aaed96be44ba723f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

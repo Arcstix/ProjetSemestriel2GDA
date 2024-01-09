@@ -43,7 +43,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8381096436406921236}
   - component: {fileID: 4070394535209854155}
-  - component: {fileID: 544766332308123130}
   - component: {fileID: 4460314204860555871}
   - component: {fileID: 3477930450823411698}
   m_Layer: 0
@@ -119,14 +118,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &544766332308123130
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2484113264342015107}
-  m_Enabled: 1
 --- !u!114 &4460314204860555871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,6 +222,7 @@ GameObject:
   - component: {fileID: 8609892034277337628}
   - component: {fileID: 7921104503681814021}
   - component: {fileID: 2310560819108833243}
+  - component: {fileID: 4165112496626043093}
   m_Layer: 0
   m_Name: Player RigidBody
   m_TagString: Entity
@@ -337,6 +329,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _joystickSpeedMultiplier: 40
   _speed: 40
+  _lowSpeed: 20
+  _mediumSpeed: 40
+  _highSpeed: 60
   distance: 0
 --- !u!114 &7921104503681814021
 MonoBehaviour:
@@ -370,6 +365,19 @@ MonoBehaviour:
   _traumaExponent: 1
   _maximumAngularShake: {x: 5, y: 5, z: 5}
   _maximumTranslationShake: {x: 0.75, y: 0.75, z: 0.75}
+--- !u!114 &4165112496626043093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5109804343729722783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!1001 &976220571510685626
 PrefabInstance:
   m_ObjectHideFlags: 0

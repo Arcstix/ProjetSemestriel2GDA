@@ -5,7 +5,7 @@
 			<value>Magenta</value>
 		</property>
 		<property name="name">
-			<value>Charachter</value>
+			<value>Character</value>
 		</property>
 		<relationship name="folder">
 			<destination>{5bc29163-4622-4fec-89f5-b7a01d9ed4ad}</destination>

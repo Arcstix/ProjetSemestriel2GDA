@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{76431e65-8336-40c9-951e-15fab34eddf1}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>Colect</value>
@@ -59,7 +59,11 @@
 			<destination>{b89863e3-3cb4-4111-a379-f6f1f60749b6}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{637df68a-d437-4b41-a2ac-479bb33f7248}" />
+	<object class="EventAutomatableProperties" id="{637df68a-d437-4b41-a2ac-479bb33f7248}">
+		<property name="maximumDistance">
+			<value>60</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{4ef5376b-3221-44f1-9a25-250d5f1ca03e}" />
 	<object class="GroupTrack" id="{74625660-4508-460d-96f4-e365601eed61}">
 		<relationship name="modules">
@@ -95,9 +99,6 @@
 		<property name="length">
 			<value>0.44</value>
 		</property>
-		<property name="playlistMode">
-			<value>1</value>
-		</property>
 		<relationship name="sounds">
 			<destination>{ec029482-4539-4e7a-bb51-bf8b6a8fdf73}</destination>
 			<destination>{a0491a51-6ee9-4f26-aca4-5577e0b9f22f}</destination>
@@ -108,7 +109,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{0e82e1b6-16c9-4dc5-ae51-2e673d85c1f7}">
 		<property name="volume">
-			<value>-8</value>
+			<value>-4</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>

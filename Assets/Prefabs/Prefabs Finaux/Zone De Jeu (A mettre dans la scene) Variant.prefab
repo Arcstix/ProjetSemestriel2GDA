@@ -16,6 +16,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zone De Jeu (A mettre dans la scene) Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4764418058052084809, guid: 08d63af523080f043936f0c5a6746658, type: 3}
+      propertyPath: _spawnOffset.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5473856293102322891, guid: 08d63af523080f043936f0c5a6746658, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

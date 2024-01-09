@@ -11,6 +11,13 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float _speed = 20f;
 
+    [SerializeField] private float _lowSpeed = 60f;
+    [SerializeField] private float _mediumSpeed = 80f;
+    [SerializeField] private float _highSpeed = 100f;
+
+    private FMOD.Studio.EventInstance event_fmod;
+
+
     private Rigidbody _playerRb;
     private Vector3 _targetPosition;
     private Vector3 _directionVector;
@@ -24,6 +31,9 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         _playerRb = GetComponent<Rigidbody>();
+        event_fmod = FMODUnity.RuntimeManager.CreateInstance("event:/Character/Movement/varSpeed");
+        event_fmod.setParameterByName("speed_Stages", 0.0f);
+        event_fmod.start();
     }
 
     public void SetTargetPosition(Vector3 targetPosition)
@@ -55,6 +65,28 @@ public class PlayerMovement : MonoBehaviour
     private void ApplyMouseVelocity(float distance)
     {        
         _playerRb.velocity = _directionVector * distance * _speed * Time.fixedDeltaTime;
+        if(_playerRb.velocity.magnitude > 0 )
+        {
+            if(_playerRb.velocity.magnitude < _lowSpeed)
+            {
+                event_fmod.setParameterByName("speed_Stages", 1.0f);
+                return;
+            }
+            else if(_playerRb.velocity.magnitude < _mediumSpeed) 
+            {
+                event_fmod.setParameterByName("speed_Stages", 2.0f);
+                return;
+            }
+            else
+            {
+                event_fmod.setParameterByName("speed_Stages", 3.0f);
+                return;
+            }
+        }
+        else
+        {
+            event_fmod.setParameterByName("speed_Stages", 0.0f);
+        }
     }
 
     /// <summary>

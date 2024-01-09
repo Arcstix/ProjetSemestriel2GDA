@@ -36,6 +36,7 @@ public class Detection : MonoBehaviour
             _closestTarget = CalculateClosestTarget();
             _collectibleVFX.PlayVFXDetection();
             SendTarget();
+            FMODUnity.RuntimeManager.PlayOneShot("event:/Character/Action/Colect", transform.position);
         }
     }
 
@@ -65,6 +66,7 @@ public class Detection : MonoBehaviour
                 _closestTarget = newTarget;
                 _collectibleVFX.PlayVFXDetection();
                 SendTarget();
+                FMODUnity.RuntimeManager.PlayOneShot("event:/Character/Action/Colect", transform.position);
             }
 
             if (!_targetList.Contains(newTarget))

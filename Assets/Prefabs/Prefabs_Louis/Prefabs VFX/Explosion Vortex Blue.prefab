@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6505617174088985078}
   - component: {fileID: 3891254686978793922}
   - component: {fileID: 3803220247436782267}
+  - component: {fileID: 6635795076817409030}
   m_Layer: 0
   m_Name: Explosion Vortex Blue
   m_TagString: Untagged
@@ -234,6 +235,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maximumStress: 0.6
   _range: 90
+--- !u!114 &6635795076817409030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680781297110223181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 984723147
+      Data2: 1137029299
+      Data3: 75748266
+      Data4: 723407823
+    Path: event:/Action/BlackHoleExplosionBlue
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 1000
 --- !u!1 &9035680653745633133
 GameObject:
   m_ObjectHideFlags: 0

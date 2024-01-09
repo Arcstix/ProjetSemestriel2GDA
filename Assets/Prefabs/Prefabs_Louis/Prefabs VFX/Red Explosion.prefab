@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7420343880291961839}
   - component: {fileID: 4081577657350085097}
   - component: {fileID: 964925339725191417}
+  - component: {fileID: 689719520176109207}
   m_Layer: 0
   m_Name: Red Explosion
   m_TagString: Untagged
@@ -166,3 +167,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _visualEffect: {fileID: 7420343880291961839}
+--- !u!114 &689719520176109207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354834066544771858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -733070691
+      Data2: 1206732821
+      Data3: -94994508
+      Data4: -23403024
+    Path: event:/Action/colectExplosionRed
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 60

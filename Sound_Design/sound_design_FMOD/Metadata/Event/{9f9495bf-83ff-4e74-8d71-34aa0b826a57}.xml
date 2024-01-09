@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{9f9495bf-83ff-4e74-8d71-34aa0b826a57}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>BlackHoleExplosionRed</value>
@@ -59,7 +59,11 @@
 			<destination>{b89863e3-3cb4-4111-a379-f6f1f60749b6}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{36949ebe-f5bd-4625-ae6b-0f503db10737}" />
+	<object class="EventAutomatableProperties" id="{36949ebe-f5bd-4625-ae6b-0f503db10737}">
+		<property name="maximumDistance">
+			<value>8000</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{14fa73b3-da9a-4ca4-aa7d-78f06a00a15c}" />
 	<object class="GroupTrack" id="{36f42372-8df5-4709-a823-538705253d16}">
 		<relationship name="modules">
@@ -93,7 +97,7 @@
 	<object class="MixerBusPanner" id="{869f0e49-cd10-4163-90f3-c6948d8f2b54}" />
 	<object class="SingleSound" id="{5f58ff83-0198-4ad4-8e13-e1ca87b222cb}">
 		<property name="length">
-			<value>6.5</value>
+			<value>6.309749589490969</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{d1895e91-3eab-41b8-b770-99f89f9b99d7}</destination>
@@ -131,6 +135,13 @@
 	</object>
 	<object class="MixerBusPanner" id="{8dea964c-c4d2-48f7-aa09-e8c347698f60}" />
 	<object class="MixerBusFader" id="{51648c0c-b5bb-4fcf-b487-9af88d417ede}" />
-	<object class="SpatialiserEffect" id="{cd466d48-b549-4255-a8a0-725e4e968e49}" />
+	<object class="SpatialiserEffect" id="{cd466d48-b549-4255-a8a0-725e4e968e49}">
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>24</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{a330eea4-437c-47a6-b1d8-1af74c6a2bd1}" />
 </objects>

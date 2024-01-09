@@ -34,6 +34,9 @@
 		<relationship name="timeline">
 			<destination>{829ca162-6f26-4ed3-8a60-a9bc29cd7fb5}</destination>
 		</relationship>
+		<relationship name="parameters">
+			<destination>{e90a9325-0916-4f68-9263-085a38d16589}</destination>
+		</relationship>
 		<relationship name="banks">
 			<destination>{44bd82d1-cbd6-47e1-923e-a335516b495e}</destination>
 		</relationship>
@@ -72,6 +75,11 @@
 	<object class="Timeline" id="{829ca162-6f26-4ed3-8a60-a9bc29cd7fb5}">
 		<relationship name="modules">
 			<destination>{d16b4b71-2776-496d-bf2d-397df3c2b8a8}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProxy" id="{e90a9325-0916-4f68-9263-085a38d16589}">
+		<relationship name="preset">
+			<destination>{4e991b9e-3931-429a-8bc2-d04a7fe3bb11}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{632fc1c3-c2ca-49ec-ab32-83d3c0a2acb5}">
@@ -131,6 +139,13 @@
 	</object>
 	<object class="MixerBusPanner" id="{c1163dca-8481-48d9-8a14-de97914cfacc}" />
 	<object class="MixerBusFader" id="{daab02c2-2314-4c67-a09d-0d418f4ca901}" />
-	<object class="SpatialiserEffect" id="{714c65ac-7be2-43e0-874f-6c8a1c11075d}" />
+	<object class="SpatialiserEffect" id="{714c65ac-7be2-43e0-874f-6c8a1c11075d}">
+		<property name="soundSize">
+			<value>76</value>
+		</property>
+		<property name="minimumExtent">
+			<value>360</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{37cba948-50f1-4554-83c8-d3b0cedb4187}" />
 </objects>

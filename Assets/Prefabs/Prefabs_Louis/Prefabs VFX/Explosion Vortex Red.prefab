@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6631690541322503698}
   - component: {fileID: 7936805602525977000}
   - component: {fileID: 7202504829120830410}
+  - component: {fileID: 5783620896511476926}
   m_Layer: 0
   m_Name: Explosion Vortex Red
   m_TagString: Untagged
@@ -234,6 +235,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maximumStress: 0.6
   _range: 90
+--- !u!114 &5783620896511476926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474844562647147349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1617652289
+      Data2: 1316258815
+      Data3: -1439403635
+      Data4: 1466597899
+    Path: event:/Action/BlackHoleExplosionRed
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 1000
 --- !u!1 &7064109639035199503
 GameObject:
   m_ObjectHideFlags: 0

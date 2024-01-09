@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{00528962-e447-4fb5-9fab-ab79e3096759}">
 		<property name="color">
-			<value>Yellow</value>
+			<value>Green</value>
 		</property>
 		<property name="name">
 			<value>BlackHoleExplosionPurple</value>
@@ -59,7 +59,14 @@
 			<destination>{b89863e3-3cb4-4111-a379-f6f1f60749b6}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{7241bee7-3ad4-427d-aea0-89be6279df5a}" />
+	<object class="EventAutomatableProperties" id="{7241bee7-3ad4-427d-aea0-89be6279df5a}">
+		<property name="dopplerEnabled">
+			<value>true</value>
+		</property>
+		<property name="maximumDistance">
+			<value>9800</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{7c8d595d-3f2a-4b9c-80c2-6c9502fcfec0}" />
 	<object class="GroupTrack" id="{3d1a98bd-a587-4325-9ec4-f18105b4737f}">
 		<relationship name="modules">
@@ -101,7 +108,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{01841f54-a268-41a3-a60b-4d6b9298bc08}">
 		<property name="volume">
-			<value>-2</value>
+			<value>4</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -131,6 +138,13 @@
 	</object>
 	<object class="MixerBusPanner" id="{ef025e20-6dec-44ed-9897-5f532a525cfc}" />
 	<object class="MixerBusFader" id="{624ceb80-49f4-4139-92a6-bbf25a48433f}" />
-	<object class="SpatialiserEffect" id="{2469b038-9eee-4b7f-b002-d1820c6564ef}" />
+	<object class="SpatialiserEffect" id="{2469b038-9eee-4b7f-b002-d1820c6564ef}">
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>24</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{cbb0d750-57e1-4baa-a593-0a7a8446261d}" />
 </objects>

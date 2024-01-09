@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2499182596479563758}
   - component: {fileID: 378688387032428435}
   - component: {fileID: 6976059652221134372}
+  - component: {fileID: 4457307293783298416}
   m_Layer: 0
   m_Name: Explosion Purple
   m_TagString: Untagged
@@ -199,6 +200,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maximumStress: 0.6
   _range: 90
+--- !u!114 &4457307293783298416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2622948204858794613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 5409122
+      Data2: 1337320519
+      Data3: 2041293727
+      Data4: 1499924963
+    Path: event:/Action/BlackHoleExplosionPurple
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 1000
 --- !u!1 &6244456108302299587
 GameObject:
   m_ObjectHideFlags: 0
